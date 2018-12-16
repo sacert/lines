@@ -1,7 +1,7 @@
 class BlogController < ApplicationController
 
   def index
-    @posts = Post.order(created_at: :desc).all
+    @posts = Post.paginate(:page => params[:page], :per_page => 10).order(created_at: :desc).all
   end
 
   def show
@@ -17,7 +17,7 @@ class BlogController < ApplicationController
     post = params[:post][:title]
     title =  post.split('</p>')[0].remove('<p>')
     Post.create(title: title, text: post)
-    @posts = Post.order(created_at: :desc).all
+    @posts = Post.paginate(:page => params[:page], :per_page => 10).order(created_at: :desc).all
     respond_to do |format|
       format.js {render :action=>"create.js"} 
     end
