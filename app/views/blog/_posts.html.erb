@@ -2,3 +2,5 @@
   <%= post.text.html_safe %>
   <hr/>
 <% end %>
+
+<%= will_paginate @posts, :previous_label => '<', :next_label => '>', class: :flickr_pagination %>
