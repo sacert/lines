@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-2">
+
+      <div class="title">
+        <h1>My Blogs</h1>
+      </div>
+
+      <%= form_for :post, url: {action: "create"}, remote: true do |f| %>
+        <div class="form-group">
+          <%= f.text_field :title, class: 'quill_container' %>
+          <%= f.submit id: :submit_post, class: "float-right" %>
+        </div>
+      <% end %>
+
+      <div id="seperator">
+        <hr/>
+      </div>
+
+      <div id = "posts">
+        <%= render "posts" %>
+      </div>
+    </div>
+  </div>
+</div>

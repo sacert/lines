@@ -1,0 +1,4 @@
+$("#posts").html("<%= escape_javascript render(partial: 'posts', :handlers => [:erb]) %>");
+
+// clear quilljs text - this is actually disgusting...
+$('.ql-editor')[0].innerText = ""

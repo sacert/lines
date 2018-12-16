@@ -1,0 +1,35 @@
+// Place all the styles related to the Blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+.title {
+  text-align: center;
+}
+
+.form-control {
+  clear:both;
+  height: auto;
+  border: none;
+  box-shadow: none;
+}
+
+#submit_post {
+  color: white;
+  float: right; 
+  background-color: #ffb2b2;
+  border: none;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+#submit_post:hover {
+  background-color: #ff9999;
+}
+
+#seperator {
+  margin-top: 50px;
+}
